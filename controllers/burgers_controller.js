@@ -1,21 +1,20 @@
-const { Router } = require('express');
 const express = require('express');
 const burger = require('../models/burger')
 
-const router = express.Router()
+const router = express.Router();
 
-module.exports = router => {
+module.exports = app => {
     router.get("/", function(req, res){
         burger.all(data => {
             res.render('index', {burgers: data});
         })
     })
-    router.post('/burgers', (req, res) => {
+    router.post('/api/burgers', (req, res) => {
         burger.insertOne(['burger_name', 'devoured'], [req.body.burger_name, req.body.devoured], (result) => {
             res.json({ id: result.insertId })
         })
     });
-    router.put('/burgers/:id', (req, res) => {
+    router.put('/api/burgers/:id', (req, res) => {
         const condition = `id = ${req.params.id}`;
     
         burger.updateOne(
