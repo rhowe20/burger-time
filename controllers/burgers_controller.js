@@ -2,9 +2,9 @@ const { Router } = require('express');
 const express = require('express');
 const burger = require('../models/burger')
 
-const router = express.Router();
+const router = express.Router()
 
-module.exports = app => {
+module.exports = router => {
     router.get("/", function(req, res){
         burger.all(data => {
             res.render('index', {burgers: data});
