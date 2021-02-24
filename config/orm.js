@@ -1,6 +1,6 @@
 const connection = require('./connection');
 
-function printQuestionMarks(num) {
+function questions(num) {
     let arr = [];
   
     for (let i = 0; i < num; i++) {
@@ -42,7 +42,7 @@ function printQuestionMarks(num) {
       queryString += cols.toString();
       queryString += ") ";
       queryString += "VALUES (";
-      queryString += printQuestionMarks(vals.length);
+      queryString += questions(vals.length);
       queryString += ") ";
   
       console.log(queryString);
