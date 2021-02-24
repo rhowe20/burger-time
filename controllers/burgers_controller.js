@@ -5,7 +5,7 @@ const router = express.Router();
 
 module.exports = app => {
     router.get("/", function(req, res){
-        burger.all(data => {
+        burger.selectAll(data => {
             res.render('index', {burgers: data});
         })
     })

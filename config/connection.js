@@ -10,13 +10,13 @@ const source = {
       database: "burger_db"
     },
   
-    jawsDB: {
-      host: "<host name>",
-      port: 3306,
-      user: "<name of user>",
-      password: "<password>",
-      database: "<name of database>"
-    }
+    // jawsDB: {
+    //   host: "<host name>",
+    //   port: 3306,
+    //   user: "<name of user>",
+    //   password: "<password>",
+    //   database: "<name of database>"
+    // }
   };
 
 const connection = mysql.createConnection(source.localhost);
