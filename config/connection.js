@@ -1,7 +1,7 @@
 const mysql = require('mysql');
+const util = require('util');
 
 const source = {
-
     localhost: {
       host: "localhost",
       port: 3306,
@@ -9,14 +9,7 @@ const source = {
       password: "Fru1tBa$ket",
       database: "burger_db"
     },
-  
-    // jawsDB: {
-    //   host: "<host name>",
-    //   port: 3306,
-    //   user: "<name of user>",
-    //   password: "<password>",
-    //   database: "<name of database>"
-    // }
+
   };
 
 const connection = mysql.createConnection(source.localhost);

@@ -20,7 +20,7 @@ $(function() {
         )
     })
 
-    $(".makeBurgerForm").on("submit", function(event) {
+    $(".makeBurgerForm").on(".letUsEat", function(event) {
         event.preventDefault();
 
         const burgerNew = {

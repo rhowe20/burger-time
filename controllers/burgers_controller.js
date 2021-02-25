@@ -3,7 +3,6 @@ const burger = require('../models/burger')
 
 const router = express.Router();
 
-module.exports = app => {
     router.get("/", function(req, res){
         burger.selectAll(data => {
             res.render('index', {burgers: data});
@@ -30,4 +29,5 @@ module.exports = app => {
             }
         )
     });
-}
+
+    module.exports = router;
