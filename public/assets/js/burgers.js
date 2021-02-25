@@ -14,13 +14,12 @@ $(function() {
             data: burgerEaten
         }).then(
             function() {
-                console.log("Changed burger status to ", burgerEaten.devoured);
                 location.reload();
             }
         )
     })
 
-    $(".makeBurgerForm").on(".letUsEat", function(event) {
+    $(".makeBurgerForm").on("submit", function(event) {
         event.preventDefault();
 
         const burgerNew = {
@@ -35,7 +34,6 @@ $(function() {
             data: burgerNew
         }).then(
             function() {
-                console.log("Created new burger");
                 location.reload();
             }
         )
